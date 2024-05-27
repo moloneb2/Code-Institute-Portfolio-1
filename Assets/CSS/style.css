@@ -8,7 +8,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+a{
 
+}
 /*General Styles*/
 body {
     min-height: 100vh;
@@ -38,12 +40,34 @@ header {
     height: 8vw;
     width: 100vw;
     box-shadow: 0 2px 2px black;
+     
 }
 /*Sky backdrop inside header*/
 #sky {
     background: url("../Images/header-pic-sky.jpg") no-repeat center center/cover;
     height: 8vw;
     width: 100vw;
+    display: inline-block;
+}
+/*Hamburger Menu*/
+#hamburger-menu{
+    width: 5vw;
+    margin-top: 0;
+     
+}
+#div-menu-and-Title{
+    display: flex;
+    height: 5vw;
+    margin-top: 1vw;
+    margin-left: 3vw;
+}
+#title-bumblebee-pic{
+    width: 4vw; 
+    border-radius: 2vw;
+    position: absolute;
+    z-index: 2;
+    left: 13.3vw;
+    top: 0.3vw;    
 }
 
 /*Main Section*/
@@ -61,7 +85,7 @@ footer {
 /*h1 font style*/
 h1,h2{
     font-family: 'Sniglet', sans-serif;
-    width: 100vw;
+    
 }
 
 #h1-header-text {
@@ -69,14 +93,9 @@ h1,h2{
     -webkit-text-stroke-width: 0.15vw;
     -webkit-text-stroke-color: black;
     color: orange;
-    margin-left: 12vw;
-    padding-top: 1.5vw;
+    margin-left: 5vw;
+    margin-top: 0;
+     width: 90vw;
 }
-#h2-header-text {
-    font-size: 1vw;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-    color: orange;
-     margin-left: 2vw;
-}
+
  

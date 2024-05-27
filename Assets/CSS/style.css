@@ -21,6 +21,7 @@ body {
 
 /*Header, Main ad Footer structure for body using grid display*/
 body {
+    height: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0fr 3fr auto;
@@ -34,14 +35,15 @@ header {
     grid-area: header;
     z-index: 99;
     position: fixed;
-    height: 100px;
-
+    height: 8vw;
+    width: 100vw;
+    box-shadow: 0 2px 2px black;
 }
-
+/*Sky backdrop inside header*/
 #sky {
     background: url("../Images/header-pic-sky.jpg") no-repeat center center/cover;
-    height: 100px;
-    width: 1400px;
+    height: 8vw;
+    width: 100vw;
 }
 
 /*Main Section*/
@@ -57,16 +59,24 @@ footer {
 }
 
 /*h1 font style*/
-h1 {
+h1,h2{
     font-family: 'Sniglet', sans-serif;
-
+    width: 100vw;
 }
 
 #h1-header-text {
-    font-size: 50px;
+    font-size: 4.3vw;
+    -webkit-text-stroke-width: 0.15vw;
+    -webkit-text-stroke-color: black;
+    color: orange;
+    margin-left: 12vw;
+    padding-top: 1.5vw;
+}
+#h2-header-text {
+    font-size: 1vw;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
     color: orange;
-    margin-left: 15%;
-    padding-top: 15px;
+     margin-left: 2vw;
 }
+ 

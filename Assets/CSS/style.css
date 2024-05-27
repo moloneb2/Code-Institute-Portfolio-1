@@ -1,0 +1,49 @@
+/*google fonts imported*/
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Sniglet:wght@400;800&display=swap');
+
+/*asterisk wildcard selector  to override default styles added  by the browser*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*General Styles*/
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*generic project styles*/
+    color: #3a3a3a;
+    font-family: 'Montserrat' , sans-serif;
+}
+/*Header, Main ad Footer structure for body using grid display*/
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0fr 3fr auto;
+    grid-template-areas: "header"
+                          "main"
+                          "footer";
+}
+/*Header*/
+header{
+grid-area: header;
+background-color: aqua;
+}
+/*Main Section*/
+main{
+grid-area: main;
+background-color: yellow;
+}
+/*Footer Section*/
+footer{
+grid-area: footer;
+background-color: lime;
+}
+
+/*h1 font style*/
+h1{
+    font-family: 'Sniglet' , sans-serif;
+}

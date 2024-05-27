@@ -30,12 +30,20 @@ body{
 /*Header*/
 header{
 grid-area: header;
-background-color: aqua;
+ z-index: 99;
+ position: fixed;
+ height: 100px;
+  
+}
+#sky{
+    background: url("../Images/header-pic-sky.jpg") no-repeat center center/cover;
+    height: 100px;
+    width: 1400px;
 }
 /*Main Section*/
 main{
 grid-area: main;
-background-color: yellow;
+background-color: red;
 }
 /*Footer Section*/
 footer{

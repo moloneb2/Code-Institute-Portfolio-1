@@ -23,10 +23,10 @@ body {
 
 /*Header, Main ad Footer structure for body using grid display*/
 body {
-    height: 100vw;
+    height: 55vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0fr 3fr auto;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas: "header"
         "main"
         "footer";
@@ -53,7 +53,9 @@ header {
 #hamburger-menu{
     width: 5vw;
     margin-top: 0;
-     
+}
+#hamburger-menu:hover{
+    cursor: pointer;
 }
 #div-menu-and-Title{
     display: flex;
@@ -72,14 +74,64 @@ header {
 
 /*Main Section*/
 main {
+    margin-top: 8.3vw;
     grid-area: main;
-    background-color: transparent;
 }
+/*styling of main section pic*/
+#pic-main-section {
+    background: url("../Images/pic-main-section-A.JPG") no-repeat center center/cover;
+    height: 46vw;
+    width: 100vw;
+}
+/*styling of dropdown menu text*/
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+  }
+  /*styling of div that contains the dropdown menu*/
+  #menu-div{
+    
+     
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vw;
+  }
+nav {
+    background: url("../Images/header-pic-2.jpg") no-repeat center center/cover;
+    position: absolute;
+    background-color: transparent;
+    width: 55vw;
+    height: 6vw;
+    left: 19vw;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #a8a7a7;
+    border-radius: 0.5vw;
+    display: none;
+    top: 105%;
+  }
+  nav:hover{
+    cursor: pointer;
+  }
+  
+  /* Nav toggle */
+  #nav-toggle:checked~nav {
+    display: block;
+  }
+  
+  #nav-toggle {
+    display: none;
+  }
+  
+  .nav-toggle-label {
+    font-size: 2rem;
+  }
 
 /*Footer Section*/
 footer {
     grid-area: footer;
     background-color: lime;
+    height: 8vw;
 }
 
 /*h1 font style*/

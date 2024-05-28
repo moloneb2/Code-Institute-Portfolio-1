@@ -16,20 +16,18 @@ a {
 
 /*General Styles*/
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: "header" "main" "footer";
     /*generic project styles*/
     color: #3a3a3a;
     font-family: 'Montserrat', sans-serif;
 }
 
 /*Header, Main ad Footer structure for body using grid display*/
-body {
-     
-    display: flex;
-    flex-direction: column;
-}
+
 /*h1 font style*/
 h1,
 h2 {
@@ -38,12 +36,14 @@ h2 {
 }
 /*Header*/
 #h1-header-text {
+    
     font-size: 5.5vw;
     -webkit-text-stroke-width: 0.15vw;
     -webkit-text-stroke-color: black;
     color: orange;
     margin-top: 1vw;
     width: 90vw;
+    
 }
 p:hover{
     box-shadow: 0 2px 2px rgb(238, 235, 235);
@@ -51,7 +51,7 @@ p:hover{
 
 
 header {
-   
+    grid-area: header;
     z-index: 2;
     position: fixed;
     height: 8vw;
@@ -84,7 +84,7 @@ header {
 
 #hamburger-menu:hover {
     cursor: pointer;
-    box-shadow: 0.02em 0.02em 0.05em #f7f4f4;
+    box-shadow: 0.02em 0.2em 0.2em #eeecec;
 }
 
 
@@ -107,11 +107,20 @@ header {
     left: 13.3vw;
     top: 0.3vw;
 }
+#honeycomb{
+    background: url("../Images/header-pic-2.jpg") no-repeat center center/cover ;
+}
 ul{
     display: flex;
     position: absolute;
-    top: 23vw;
+    top: 22vw;
+    margin-left: 15vw;
     
+    z-index: 3;
+}
+u:hover{
+    cursor: pointer;
+     
 }
 li{
     margin-left: 5vw;
@@ -122,9 +131,9 @@ li{
 
 /*Main Section*/
 main {
-   
+   grid-area: main;
     background-color: bisque;
-    flex: 2 0 auto;
+    height: 160vw; 
 }
 
 /*styling of main section pic*/
@@ -151,20 +160,9 @@ main {
     padding-top: 2vw;
 }
 
-nav {
-    background: url("../Images/header-pic-2.jpg") no-repeat center center/cover;
-    position: absolute;
-    background-color: transparent;
-    width: 55vw;
-    height: 6vw;
-    left: 19vw;
-    padding: 0 1rem;
-    box-shadow: 0 2px 2px #a8a7a7;
-    border-radius: 0.5vw;
+ nav{
     display: none;
-    top: 105%;
-
-}
+ }
 
 nav:hover {
     cursor: pointer;
@@ -173,17 +171,17 @@ nav:hover {
 
 
 /* Nav toggle */
-#nav-toggle:checked~nav {
+#nav-toggle:checked~nav  {
     display: block;
 
 }
 
 
-/*#nav-toggle {
+#nav-toggle {
     display: none;
 
-}*/
-
+}
+ 
 .nav-toggle-label {
     font-size: 1em;
 }
@@ -193,7 +191,7 @@ nav:hover {
 footer {
     grid-area: footer;
     background-color: lime;
-    height: 8vw;
+    height: 15.8vw;
 }
 
  

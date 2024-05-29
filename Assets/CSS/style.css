@@ -11,11 +11,10 @@
 
  /*General Styles*/
 body {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas: "header" "main" "footer";
+   
+    height: 100vh;
+    display: flex;
+     flex-direction: column;
     /*generic project styles*/
     color: #3a3a3a;
     font-family: 'Modak', sans-serif;
@@ -44,11 +43,13 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-    height: 20vw;
+    height: 19vw;
 }
 header a {
     text-decoration: none;
-    color: inherit;
+    color: white;
+    font-size: 3vw;
+   
 }
 header img {
     position: absolute;
@@ -63,47 +64,64 @@ header img:hover{
     box-shadow: 0.02em 0.2em 0.5em #eeecec;
 }
 #menu {
-    background: url("../Images/header-pic-2.jpg");
+    background: url("../Images/header-pic-2.jpg")no-repeat center center/cover;
     border-radius: 1vw;
     display: flex;
     justify-content: space-around;
     font-size: 110%;
     letter-spacing: 0;
     list-style-type: none;
-    margin-top: 10vw;
+     width: 50vw;
+    height: 5vw;
     
 }
 
 #menu > li {
-    margin-right: 4vw;
+     
     font-size: 5vw;
     -webkit-text-stroke-width: 0.15vw;
     -webkit-text-stroke-color: black;
     color: rgb(250, 249, 248);
-    padding: 1.5vw;
+     margin-bottom: 5vw;
+}
+#dropdown-text{
+    position: absolute;
+
 }
 /*styling of dropdown menu*/
 nav {
     position: absolute;
-    left: 16vw;
-    top: 15vw;
+    left: 29vw;
+    top: 20vw;
     display: none;
+    
 }
 /* Nav toggle */
 #nav-toggle:checked~nav {
     display: block;
 }
+#nav-toggle {
+    display:none;
+}
 /*Main Section*/
 main {
-    grid-area: main;
-    background-color: bisque;
+    
+    flex: 1 1 auto;
+    width: 100%;
     height: 160vw;
+}
+/*BumbleBee Background*/
+#bumblebee-background{
+    margin-top: 19vw;
+    height: 900px;
+    width: 100%;
+    background: url("../Images/Pic-Main-Section-2.jpg")no-repeat center center/cover;
 }
 /*Footer Section*/
 footer {
     grid-area: footer;
     background-color: lime;
-    height: 15.8vw;
+    
 }
 
  

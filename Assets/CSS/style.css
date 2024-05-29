@@ -66,12 +66,12 @@ header img:hover{
     background: url("../Images/header-pic-2.jpg");
     border-radius: 1vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 110%;
     letter-spacing: 0;
     list-style-type: none;
     margin-top: 10vw;
-     
+    
 }
 
 #menu > li {
@@ -80,6 +80,14 @@ header img:hover{
     -webkit-text-stroke-width: 0.15vw;
     -webkit-text-stroke-color: black;
     color: rgb(250, 249, 248);
+    padding: 1.5vw;
+}
+/*styling of dropdown menu*/
+nav {
+    position: absolute;
+    left: 16vw;
+    top: 15vw;
+    display: none;
 }
 /*Main Section*/
 main {
